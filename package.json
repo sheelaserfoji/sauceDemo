@@ -1,0 +1,15 @@
+{
+    "devDependencies": {
+        "@wdio/cli": "^8.39.1",
+        "@wdio/cucumber-framework": "^8.39.0",
+        "@wdio/local-runner": "^8.39.1",
+        "@wdio/spec-reporter": "^8.39.0",
+        "multiple-cucumber-html-reporter": "^3.7.0"
+    },
+    "scripts": {
+        "regression": "wdio run wdio.conf.js"
+    },
+    "dependencies": {
+        "wdio-cucumberjs-json-reporter": "^5.2.1"
+    }
+}
