@@ -27,15 +27,7 @@ jobs:
             google-chrome --version
 
        -  name: Install ChromeDriver
-          run: |
-              # Extract Chrome version and fetch the matching ChromeDriver version
-              CHROME_VERSION=$(google-chrome --version | grep -oP '\d+\.\d+\.\d+' | head -n1)
-              # Check if CHROME_VERSION is extracted properly
-              echo "Detected Chrome version: $CHROME_VERSION"
-              # Download the corresponding ChromeDriver version
-              wget -N https://chromedriver.storage.googleapis.com/$(curl -sS "https://chromedriver.storage.googleapis.com/LATEST_RELEASE_$CHROME_VERSION")/chromedriver_linux64.zip
-              # Unzip and move to /usr/local/bin
-              unzip chromedriver_linux64.zip -d /usr/local/bin/
+          run: npm install chromedriver --save-dev
             
        -  name: Install dependancies
           run: npm install
