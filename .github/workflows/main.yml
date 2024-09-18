@@ -20,14 +20,14 @@ jobs:
           with:
               node-version: '18'
 
-       -  name: Install Chrome
-          run: |
-            sudo apt-get update
-            sudo apt-get install -y google-chrome-stable
-            google-chrome --version
+       # -  name: Install Chrome
+       #    run: |
+       #      sudo apt-get update
+       #      sudo apt-get install -y google-chrome-stable
+       #      google-chrome --version
 
-       -  name: Install ChromeDriver
-          run: npm install chromedriver --save-dev
+       # -  name: Install ChromeDriver
+       #    run: npm install chromedriver --save-dev
             
        -  name: Install dependancies
           run: npm install
