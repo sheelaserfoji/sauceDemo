@@ -24,4 +24,4 @@ jobs:
    
        -  name: run tests
           working-directory: ./sauceDemo
-          run: node_modules/.bin/cypress run --headless
+          run: npm run regression
