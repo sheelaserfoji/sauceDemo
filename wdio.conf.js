@@ -30,7 +30,7 @@ exports.config = {
 
     capabilities: [{
         maxInstances: 10,
-        browserName: 'chrome'
+        browserName: 'chrome',
          'goog:chromeOptions': {
             args: [
                 '--headless',            // Run in headless mode
