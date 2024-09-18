@@ -34,7 +34,7 @@ jobs:
        #        publish_branch: gh-pages  # The branch to publish to
 
        -  name: Upload HTML Report
-          uses: actions/upload-artifact@v2
+          uses: actions/upload-artifact@v4
           with:
             name: test-report
             path: ./reports/html  # Adjust this path to where your report is
