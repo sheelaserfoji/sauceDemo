@@ -37,5 +37,5 @@ jobs:
           uses: actions/upload-artifact@v4
           with:
             name: test-report
-            path: ./reports/html  # Adjust this path to where your report is
+            path: ./reports/html/index.html  # Adjust this path to where your report is
 
