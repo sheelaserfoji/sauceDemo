@@ -31,6 +31,17 @@ exports.config = {
     capabilities: [{
         maxInstances: 10,
         browserName: 'chrome'
+         'goog:chromeOptions': {
+            args: [
+                '--headless',            // Run in headless mode
+                '--disable-gpu',          // Disable GPU usage
+                '--no-sandbox',           // Bypass OS security model
+                '--disable-dev-shm-usage',// Overcome limited resource issues
+                '--disable-software-rasterizer',
+                //'--window-size=1920,1080' // Set the screen resolution
+            ],
+            binary: '/usr/bin/google-chrome'
+        }
     }],
 
     //
