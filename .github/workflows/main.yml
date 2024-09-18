@@ -19,18 +19,16 @@ jobs:
           uses: actions/setup-node@v2
           with:
               node-version: '18'
-
-       # -  name: Install Chrome
-       #    run: |
-       #      sudo apt-get update
-       #      sudo apt-get install -y google-chrome-stable
-       #      google-chrome --version
-
-       # -  name: Install ChromeDriver
-       #    run: npm install chromedriver --save-dev
             
        -  name: Install dependancies
           run: npm install
    
        -  name: Run tests
           run: npm run regression
+
+       -  name: Deploy report to GitHub Pages
+          uses: peaceiris/actions-gh-pages@v3
+          with:
+              github_token: ${{ secrets.GITHUB_TOKEN }}
+              publish_dir: ./reports/html  # Path where the HTML report is located
+              publish_branch: gh-pages  # The branch to publish to
